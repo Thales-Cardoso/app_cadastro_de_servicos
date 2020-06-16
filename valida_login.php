@@ -24,11 +24,11 @@
 	}
 
 	if($usuario_autenticado){
-			$_SESSION['autenticacao'] = 'autenticado';
-			echo 'Logado';
+		$_SESSION['autenticacao'] = 'autenticado';
+		header('Location: home.php');
 	} else {
+		$_SESSION['autenticacao'] = '0';
 		header('Location: index.php?login=erro');
-			$_SESSION['autenticacao'] = '0';
 	}
 
 ?>

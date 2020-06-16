@@ -1,13 +1,4 @@
-<?php
-  session_start();
-
-  if(!isset($_SESSION['autenticacao']) || $_SESSION['autenticacao'] != 'autenticado'){
-    header('location: index.php?login=erro2');
-  }
-  
-  echo $_SESSION['autenticacao'];
-?>
-
+<?php require_once "validador_acesso.php"; ?>
 
 <html>
   <head>
@@ -28,7 +19,7 @@
   <body>
 
     <nav class="navbar navbar-dark bg-dark">
-      <a class="navbar-brand" href="#">
+      <a class="navbar-brand" href="home.php">
         <img src="logo.png" width="30" height="30" class="d-inline-block align-top" alt="">
         App Help Desk
       </a>
