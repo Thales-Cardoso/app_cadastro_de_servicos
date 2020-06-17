@@ -1,4 +1,3 @@
-
 <html>
   <head>
     <meta charset="utf-8" />
@@ -42,7 +41,9 @@
                   <input name="senha" type="password" class="form-control" placeholder="Senha">
                 </div>
 
-                  <?php if(isset($_GET['login']) && $_GET['login'] == 'erro') { ?>
+                  <?php 
+                    // Mostra um aviso de erro de Login e senha
+                    if(isset($_GET['login']) && $_GET['login'] == 'erro') { ?>
                     
                     <div class="text-danger">
                       Usuário ou senha inválido(s)
@@ -50,7 +51,9 @@
 
                   <?php } ?>
 
-                  <?php if(isset($_GET['login']) && $_GET['login'] == 'erro2') { ?>
+                  <?php 
+                    // Mostra um aviso de erro de acesso
+                    if(isset($_GET['login']) && $_GET['login'] == 'erro2') { ?>
                     
                     <div class="text-danger">
                       Faça Login antes de acessar as páginas
